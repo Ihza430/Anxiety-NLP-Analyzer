@@ -8,7 +8,7 @@ import regex as re
 
 st.set_page_config(
     page_title = 'Anxiety',
-    page_icon='📖',
+    page_icon='noto:upside-down-face',
     initial_sidebar_state='auto'
 )
 
