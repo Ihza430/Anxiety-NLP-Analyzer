@@ -6,22 +6,22 @@ from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 import regex as re
 
+import chatgui
+
 st.set_page_config(
     page_title = 'Anxiety',
-    page_icon='noto:upside-down-face',
+    page_icon='🙃',
     initial_sidebar_state='auto'
 )
 
-st.title('Do you have anxiety?')
-
-page = st.sidebar.selectbox(
+st.page_select = st.sidebar.selectbox(
     'Navigation',
-    ('About', 'EDA', 'Make a Prediction')
+    ('Home', 'About', 'EDA', 'Analyze Text', 'Chatbot')
 )
 
 @st.cache
 def load_data():
-    df = pd.read_csv('../anx_writing.csv')
+    df = pd.read_csv('../../clean_datasets/anx_writing.csv')
     return df
 
 
@@ -41,19 +41,22 @@ def custom_preprocessor (text):
     return text
     #copied from https://www.studytonight.com/post/scikitlearn-countvectorizer-in-nlp
 
-if page == 'About':
-    st.subheader('About this project')
+if st.page_select == 'Home':
+    st.title('Anxiety Analyzer')
+    
+elif st.page_select == 'About':
+    st.title('About this project')
     st.write('''
     This is a Streamlit app that hosts a model to determine whether a text shows signs of anxiety.
     
     The model being used is Logistic Regression.
     ''')
 
-elif page == 'EDA':
+elif st.page_select == 'EDA':
     df = load_data()
     st.table(df.sample(5))
 
-elif page == 'Make a Prediction':
+elif st.page_select == 'Analyze Text':
 
     with open('models/anxiety_log.pkl', 'rb') as pickle_in:
         model = pickle.load(pickle_in)
@@ -68,8 +71,11 @@ elif page == 'Make a Prediction':
         st.write('Would you like to talk')
         
         if st.button('Yes'):
-            st.write('Why hello there, friend')
+            st.page_select = 'Chatbot'
         
         if st.button('No'):
             st.write('Take care, friend')
+            
+elif st.page_select == 'Chatbot': 
+    st.title('Chatbot')
        

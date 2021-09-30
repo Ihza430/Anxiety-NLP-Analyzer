@@ -34,12 +34,16 @@ for intent in intents['intents']:
 # lemmaztize and lower each word and remove duplicates
 words = [lemmatizer.lemmatize(w.lower()) for w in words if w not in ignore_words]
 words = sorted(list(set(words)))
+
 # sort classes
 classes = sorted(list(set(classes)))
+
 # documents = combination between patterns and intents
 print (len(documents), "documents")
+
 # classes = intents
 print (len(classes), "classes", classes)
+
 # words = all words, vocabulary
 print (len(words), "unique lemmatized words", words)
 
@@ -49,8 +53,10 @@ pickle.dump(classes,open('classes.pkl','wb'))
 
 # create our training data
 training = []
+
 # create an empty array for our output
 output_empty = [0] * len(classes)
+
 # training set, bag of words for each sentence
 for doc in documents:
     # initialize our bag of words
