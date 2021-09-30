@@ -1,4 +1,4 @@
-# Analysis of Anxiety through Text
+# "Are you feeling anxious right now? Take this moment to a breath."
 
 *By Azin Faghihi, Ihza Gonzales and Suelem Lee
 
@@ -12,7 +12,7 @@
 5. Datasets
 
 ## Identified Need
-The Need: About 19% of adults have an anxiety disorder (Anxiety disorders, 2017). To put this in perspective that is over 40 million people in the US with anxiety. Now one’s choice of words even punctuation can hint at the mental or emotional status of a person (Havigerová et al., 2019). There are systems already created for the purpose of analyzing text to provide feedback about a person like the system, TensiStrength (Thelwall, 2016).
+About 19% of adults have an anxiety disorder (Anxiety disorders, 2017). To put this in perspective that is over 40 million people in the US with anxiety. Now one’s choice of words even punctuation can hint at the mental or emotional status of a person (Havigerová et al., 2019). There are systems already created for the purpose of analyzing text to provide feedback about a person like the system, TensiStrength (Thelwall, 2016).
 
 ## Problem Statement
 The goal is to create a similar system with posts from the anxiety subreddit and classify them into varying degrees of anxiety and provide tailored messages to address anxiety levels with a Chatbot response system, based on their anxiety level.
@@ -37,6 +37,9 @@ Not Anxious
 Anxious
 Severe Anxiety
 
+Writing subreddit helps Classification for it's predominant positive neutral language.
+![writing subreddit vs anxiety subreddit Sentiment](./imgs/sentiment_small.png)
+
 **Models used to Classify anxiety levels are:**
 
 Multinomial Naive Bayes
@@ -50,6 +53,8 @@ Adjusted term weights: Methods to detect expressions of stress within short info
 1. Repeated consecutive letters
 2. Frequency of Punctuation use
 3. Various different use of Emoticons
+
+![Distribution of Sentiment scores EMOTICONS](./imgs/sentiment_dist_emoji.png)
 
 **Evidence of improvement:** The improvements suggest that additional fine tuning of the term strengths is necessary. The supervised version of our 3 models are preferable to the unsupervised variant, using Tfdif Vectorizer and Count Vectorizer only. Using bigrams hyperparameters for combined additional linguistic negation. After Classifying existance of anxiety on each post, we used a SentimentIntensityAnalyser to classify the intensity of the anxiety of that particular post.
 
@@ -67,7 +72,11 @@ Best Parameters: <br>{'logr__C': 3,<br> 'logr__max_iter': 2000,<br> 'logr__penal
 Train Score: 0.9921428571428571<br>
 Test Score: 0.9483333333333334<br>
 
-Random Forest 
+**Random Forest:**
+Best Score: 0.9531035939090995<br>
+Best Parameters: {'rf__max_depth': None,<br> 'rf__max_features': 'sqrt',<br> 'rf__n_estimators': 80,<br> 'tvec__max_features': 2000,<br> 'tvec__ngram_range': (1, 2),<br> 'tvec__stop_words': None}<br>
+Train Score: 0.9985569985569985<br>
+Test Score: 0.9556926528323051<br>
 
 Clustering
 
@@ -76,7 +85,7 @@ Clustering
 
 ## Conclusion
 
-Overall performance of models and sentiment analysis confirms how well we can accurately classify 3 levels of anxiety. I needs to be extended and tested in different contexts and tailored with specific types of anxiety linguistics.
+Overall performance of models and sentiment analysis confirms how well we can accurately classify 3 levels of anxiety. It needs to be extended and tested in different contexts and tailored with specific types of anxiety linguistics.
 
 Relaxation is an important aspect of our lives and becoming even more relevant to our virtually connected lives. This anxiety detection app can help to enable smarter applications as well as extending our understanding of our conditions, helping to monitor our overall mental health and ultimately resulting in a punctual accessible more intimate solution for this great demand.
 
