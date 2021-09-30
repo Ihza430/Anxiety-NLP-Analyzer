@@ -1,0 +1,82 @@
+html {
+	height: 800px;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image: url(img/wood2.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	margin:0;
+	padding: 0;
+	width: 100%;
+}
+
+.heading {
+	font-size: 40px;
+	font-family: foxcat;
+	font-weight: bold;
+	position: relative;
+    top: 70px;
+    left: 0px;
+    width: 100%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/*-----nav-----*/
+.topnav {
+	float: left;
+	list-style-type: none;
+	margin-top: 25px;
+	position: relative;
+	top: 0px;
+}
+
+.topnav li {
+	display: inline-block;
+}
+
+.topnav li a {
+	color: black;
+	text-decoration: none;
+	padding: 5px 10px;
+	font-family: foxcat;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.topnav li.active a {
+	border: 1px solid black;
+}
+
+.topnav li a:hover {
+	border: 1px solid black;
+}
+
+
+body {
+	font-family: georgia;
+	font-size: 20px;
+}
+
+.row {
+	max-width: 1200px
+	margin: auto;
+}
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
