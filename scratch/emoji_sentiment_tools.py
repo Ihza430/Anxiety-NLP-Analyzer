@@ -1,6 +1,7 @@
 running_in_drive = False
 
 import pandas as pd
+import pickle
 import emoji
 import functools
 import operator
@@ -42,7 +43,7 @@ def get_emoji_scores(emtext, emoji_dict):
                 t = emoji.demojize(item)
                 text = t.replace('_', ' ').replace(':', '')
                 values = analyzer.polarity_scores(text)
-                print(item, text, values['compound'])
+#                 print(item, text, values['compound'])
                 not_found.append(item)  
         for k in default.keys():
             out[k] +=values[k]
@@ -64,9 +65,23 @@ def get_emoji_dict():
 
 
 
+def read_dict_pickle():
+    path = '../data/word_score.pkl'
+    with open(path, 'rb') as pickle_in:
+        word_dict = pickle.load(pickle_in)
+    return word_dict
+
+punc_dict = {'???': -1,'...': -0.3,'?!?!': -1.5,'!!!': -1}
+
 def get_sentiment_score(text):
     emoji_dict = get_emoji_dict()
+    
+    word_dict = read_dict_pickle()
+    
     analyzer.lexicon.update(emoji_dict)
+    analyzer.lexicon.update(word_dict)
+    analyzer.lexicon.update(punc_dict)
+
     vs = analyzer.polarity_scores(text)
     emtext = separate_emojis(extract_emojis(text))
     vs_em = get_emoji_scores(emtext, emoji_dict)
@@ -74,5 +89,4 @@ def get_sentiment_score(text):
     for k, v in vs.items():
         vs[k] += vs_em[k]
 
-    return vs
-
+    return vs['compound']
