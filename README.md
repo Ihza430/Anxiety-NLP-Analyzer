@@ -44,7 +44,7 @@
    </details>
 4. <details><summary>Presentation</summary>
     - Project-5-Presentation.pdf <br>
-    - imgages
+    - images
    </details>
 5. <details><summary>Datasets(3)</summary>
     - anxiety_submissions.csv <br>
