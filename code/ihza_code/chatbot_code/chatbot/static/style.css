@@ -1,0 +1,93 @@
+html {
+	height: 800px;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	margin:0;
+	padding: 0;
+	width: 100%;
+}
+
+.heading {
+	font-size: 40px;
+	font-family: foxcat;
+	font-weight: bold;
+	position: relative;
+    top: 20px;
+    left: 0px;
+    width: 100%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/*-----nav-----*/
+.topnav {
+	list-style-type: none;
+	margin-top: 25px;
+    text-align: center;
+	top: 0px;
+}
+
+.topnav li {
+	display: inline-block;
+}
+
+.topnav li a {
+	color: black;
+	text-decoration: none;
+	padding: 5px 10px;
+	font-family: foxcat;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.topnav li.active a {
+	border: 1px solid black;
+}
+
+.topnav li a:hover {
+	border: 1px solid black;
+}
+
+
+body {
+	font-family: georgia;
+	font-size: 20px;
+}
+
+/*-----inputs-----*/
+.input {
+    font-size: 25px;
+	font-family: foxcat;
+	font-weight: bold;
+	position: relative;
+    top: 60px;
+    left: 0px;
+    width: 100%;
+    white-space: nowrap;
+    text-align: left;
+}
+
+/*-----results-----*/
+.results {
+    font-size: 25px;
+	font-family: foxcat;
+	font-weight: bold;
+    top: 60px;
+    left: 0px;
+    width: 100%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+
+
+
+
+
+
