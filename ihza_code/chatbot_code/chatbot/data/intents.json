@@ -26,7 +26,7 @@
         },
         {"tag": "sad",
          "patterns": ["I am sad", "I am lonely", "I am gloomy" ],
-         "responses": ["Do not be sad, everything will be ok", "Cheer up!"],
+         "responses": ["Do not be sad, everything will be ok", "Cheer up"],
          "context": [""]
         },
         {"tag": "panic",
