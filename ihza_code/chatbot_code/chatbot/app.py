@@ -37,21 +37,38 @@ def anxiety_analyzer():
     
     if user_input['fav_language'] == 'Logistic Regression':
         log_model = pickle.load(open('models/anxiety_log.pkl', 'rb'))
-        anxiety = log_model.predict([X_test])[0]
-        return render_template('result.html', prediction = anxiety, model = 'Logistic Regression')
+        pred = log_model.predict([X_test])[0]
+        
+        if pred == 'Anxiety':
+            score = sentiment.get_sentiment_score(X_test)
+            
+            if score < -0.85:
+                pred = "Severe Anxiety"
+            elif -0.85 < score < -0.25:
+                pred = "Moderate Anxiety"
+            elif -0.25 < score < 0:
+                pred = "Mild Anxiety"
+            
+        return render_template('result.html', prediction = pred, model = 'Logistic Regression')
     
     elif user_input['fav_language'] == 'Multinomial Naive Bayes':
         mnb_model = pickle.load(open('models/grid_CountVectorizer_MultinomialNB.pkl', 'rb'))
-        anxiety = mnb_model.predict([X_test])[0]
+        pred = mnb_model.predict([X_test])[0]
         
-        if anxiety == 0:
-            anxiety = 'Anxiety'
-        elif anxiety == 1:
-            anxiety = 'No Anxiety'
+        if pred == 0:
+            score = sentiment.get_sentiment_score(X_test)
             
-        return render_template('result.html', prediction = anxiety, model = 'Multinomial Naive Bayes')
-    
-    #score = sentiment.score(X_test)
+            if score < -0.85:
+                pred = "Severe Anxiety"
+            elif -0.85 < score < -0.25:
+                pred = "Moderate Anxiety"
+            elif -0.25 < score < 0:
+                pred = "Mild Anxiety"
+                
+        elif pred == 1:
+            pred = 'No Anxiety'
+            
+        return render_template('result.html', prediction = pred, model = 'Multinomial Naive Bayes')
         
     
 @app.route('/messenger', methods=["GET", "POST"])

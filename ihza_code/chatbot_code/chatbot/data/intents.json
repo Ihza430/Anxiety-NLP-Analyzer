@@ -55,6 +55,6 @@
         {"tag": "encouragement",
         "patterns": ["I need a pick me up", "Do you have advice?", "Words of encouragement"],
         "responses": ["This is tough, but you’re tougher.", "I’m so sorry you’re going through this, but this too shall pass.", " I believe in you! And unicorns. But mostly you.", "Be kind to yourself."]
-        },
+        }
    ]
 }
