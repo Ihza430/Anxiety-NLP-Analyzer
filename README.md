@@ -14,6 +14,16 @@
 ## Identified Need
 About 19% of adults have an anxiety disorder (Anxiety disorders, 2017). To put this in perspective that is over 40 million people in the US with anxiety. Now one’s choice of words even punctuation can hint at the mental or emotional status of a person (Havigerová et al., 2019). There are systems already created for the purpose of analyzing text to provide feedback about a person like the system, TensiStrength (Thelwall, 2016).
 
+In the United States, the most common type of mental disorders is different kinds of anxiety.<br>
+1. Panic attack symptoms are so severe that they lead patients to believe they are suffering heart attacks. <br>
+2. The actual increased Risk of Heart Attack Panic attacks and chronic anxiety put a lot of stress on the heart with increased blood pressure and pulse.<br>
+3. More Stress Hormones too much adrenaline or cortisol over a long period of time can cause, cognitive decline, Increased risk for other mental illnesses, Higher cholesterol <br>
+4. Insomnia can lead to Weakened immune system, Unwanted weight gain...<br>
+
+While medications can treat many of these problems, we see the importance of preventive medicine in which needs to be addressed.<br>
+<img src="./imgs/depression_instagram.png" alt="Drawing" style="width: 400px;"/>
+
+
 ## Problem Statement
 From anxiety subreddit can we classify them into varying degrees of anxiety and provide tailored messages to address anxiety levels with a Chatbot response system?
 
@@ -28,42 +38,34 @@ Decision making were based on a easy to perform initial screening tool for gener
 
 ## Methodology
 
-**The analysis of scrapped texts will be used in hopes of classifying users messaging anxiety levels:**
+1. EDA
+2. Modeling for anxiety Classification
+3. Sentiment analysis validating Classification
+4. Chatbot for immediate response
+5. Sentiment analysis to further classify severity of anxiety
 
-**Binary Classification:**<br>
-Not Anxious<br>
-Anxious<br>
+**The analysis of scrapped texts will be used in hopes of classifying users messaging anxiety levels as Binary Classification:**<br>
+>Not Anxious<br>
+>Anxious<br>
 
 Writing subreddit helps Classification for it's predominant positive neutral language.
 ![writing subreddit vs anxiety subreddit Sentiment](./imgs/sentiment_small.png)
 
-**Sentiment Analysis** on how 
-
-So 
-Severe Anxiety<br>
-Threshold denomination
-
-
-distribution 
-
-
+<img src="./imgs/sentiment_dist_(1).png" alt="Drawing" style="width: 400px;"/>
 
 ## Best parameters
 
 **Adjusted term weights:** <br> Methods to detect expressions of stress within short informal messages were SentimentIntensityAnalyser extended from Classifying models, where the ajdusted term weights were evaluated to improve performance of Classification.
 
-1. Repeated consecutive letters<br>
-2. Frequency of Punctuation use<br>
-3. Various different use of Emoticons<br>
-
-![Distribution of Sentiment scores EMOTICONS](./imgs/sentiment_dist_emoji.png)
+>1. Repeated consecutive letters<br>
+>2. Frequency of Punctuation use<br>
+>3. Various different use of Emoticons<br>
+<img src="./imgs/worried.png" alt="Drawing" style="width: 300px;"/>
 
 **Evidence of improvement:** The improvements suggest that additional fine tuning of the term strengths is necessary. The supervised version of our 3 models are preferable to the unsupervised variant, using Tfdif Vectorizer and Count Vectorizer only. Using bigrams hyperparameters for combined additional linguistic negation. After Classifying existance of anxiety on each post, we used a SentimentIntensityAnalyser to classify the intensity of the anxiety of that particular post.
 
-Repeated consecutive letters present on corpus - Eq. "Wooooorrrried" carries a higher weight on sentiment intensity than "worried"
-Repeated Puntuations over 3 repetitions - Repeated exclamation and interrogation marks adds a higher strength to sentiment than repeated "...", which was also considered as a anxious indicator on a lower level of -0.5.
-Emoticons used - corresponding to their sentiment different weights were assigned as anxiety indicators, such as ......
-EDA Bigrams analysis Emoticon analysis Common short words
+## Threshold denomination
+<img src="./imgs/sentiment_threshold.png" alt="Drawing" style="width: 400px;"/>
 
 ## Best Prediction Results
 
