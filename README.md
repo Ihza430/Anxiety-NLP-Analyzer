@@ -1,15 +1,37 @@
 # "Are you feeling anxious right now? Take this moment to take a breath."
 
-*By Azin Faghihi, Ihza Gonzales and Suelem Lee
+*By Azin Faghihi, Ihza Gonzales and Suelem Lee*
 
 ## Project Structure
 
 1. README.md
 2. Executive Summary
 3. Jupyter Notebooks
-4. Python File
-4. PDF File
-5. Datasets
+   <details><summary>1. Azin Faghihi</summary>
+   </details>
+   <details><summary>2. Ihza Gonzales</summary>
+    - 1_data_cleaning.ipynb<br> 
+    - 2_logistic_regression.ipynb<br>  
+    - 3_sentiment_analysis.ipynb
+   </details>
+   <details><summary>3. Suelem Lee</summary>
+   </details>
+4. Python Files
+5. <details><summary>Chatbot Code</summary>
+        <details><summary>1. Python Files</summary>
+         - sentiment.py<br>
+         - processor.py<br>
+         - chatbot.py<br>
+         - app.py   
+        </details>
+        <details><summary>2. Templates</summary>
+         - index.html<br>
+         - result.html<br>
+         - chatbot.html   
+        </details>
+   </details>
+6. PDF File
+7. Datasets
 
 ## Identified Need
 About 19% of adults have an anxiety disorder (Anxiety disorders, 2017). To put this in perspective that is over 40 million people in the US with anxiety. Now one’s choice of words even punctuation can hint at the mental or emotional status of a person (Havigerová et al., 2019). There are systems already created for the purpose of analyzing text to provide feedback about a person like the system, TensiStrength (Thelwall, 2016).
