@@ -8,6 +8,10 @@
 2. Executive Summary
 3. Jupyter Notebooks
    <details><summary>1. Azin Faghihi</summary>
+    - Azin_01_combine_data.ipynb
+    - Azin_02_process_model_data_EDA.ipynb
+    - Azin_03_study_models_vizualization.ipynb
+    - Azin_04_study_data_extra_EDA.ipynb
    </details>
    <details><summary>2. Ihza Gonzales</summary>
     - 1_data_cleaning.ipynb<br> 
