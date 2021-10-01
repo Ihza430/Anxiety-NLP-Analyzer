@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Text Analyzer</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body style = "background-image: url('../static/img/background.jpeg')">
+    <div class="row">
+		<ul class="topnav" style = "text-align: center">
+			<li class="active"><a href="/">HOME</a></li>
+			<li><a href="/messenger">CHATBOT</a></li>
+		</ul>
+	</div>	
+	<div style="clear: both;"></div>
+	<section class="heading">
+		<p>Results</p>
+	</section>
+	<form action="/result" id="usrform">
+		<p>
+            <label for="text">Please Enter Your Text...</label><br>
+            <textarea name="text" form="usrform"></textarea>
+		</p>
+        <p>
+        <input type="radio" id="log" name="fav_language" value="Logistic Regression">
+        <label for="log">Logistic Regression</label><br>
+        
+        <input type="radio" id="mnb" name="fav_language" value="Multinomial Naive Bayes">
+        <label for="mnb">Multinomial Naive Bayes</label><br>
+        </p>
+		<p><button type="submit">Submit</button></p>
+	</form>
+</body>
+</html>
+
