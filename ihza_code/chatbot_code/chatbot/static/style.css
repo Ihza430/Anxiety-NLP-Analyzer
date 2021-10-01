@@ -5,7 +5,6 @@ html {
 }
 
 body {
-	background-image: url(img/wood2.jpg);
 	background-size: cover;
 	background-position: center;
 	height: 100%;
@@ -19,7 +18,7 @@ body {
 	font-family: foxcat;
 	font-weight: bold;
 	position: relative;
-    top: 70px;
+    top: 20px;
     left: 0px;
     width: 100%;
     white-space: nowrap;
@@ -28,10 +27,9 @@ body {
 
 /*-----nav-----*/
 .topnav {
-	float: left;
 	list-style-type: none;
 	margin-top: 25px;
-	position: relative;
+    text-align: center;
 	top: 0px;
 }
 
@@ -62,17 +60,30 @@ body {
 	font-size: 20px;
 }
 
-.row {
-	max-width: 1200px
-	margin: auto;
+/*-----inputs-----*/
+.input {
+    font-size: 25px;
+	font-family: foxcat;
+	font-weight: bold;
+	position: relative;
+    top: 60px;
+    left: 0px;
+    width: 100%;
+    white-space: nowrap;
+    text-align: left;
 }
 
-
-
-
-
-
- 
+/*-----results-----*/
+.results {
+    font-size: 25px;
+	font-family: foxcat;
+	font-weight: bold;
+    top: 60px;
+    left: 0px;
+    width: 100%;
+    white-space: nowrap;
+    text-align: center;
+}
 
 
 

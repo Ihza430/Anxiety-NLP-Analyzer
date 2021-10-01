@@ -8,7 +8,7 @@ from keras.models import load_model
 model = load_model('./models/chatbot_model.h5')
 import json
 import random
-intents = json.loads(open('job_intents.json', encoding='utf-8').read())
+intents = json.loads(open('./data/intents.json', encoding='utf-8').read())
 words = pickle.load(open('./pickles/words.pkl','rb'))
 classes = pickle.load(open('./pickles/classes.pkl','rb'))
 
@@ -62,20 +62,3 @@ def chatbot_response(msg):
     ints = predict_class(msg, model)
     res = getResponse(ints, intents)
     return res
-
-
-def custom_preprocessor (text):
-    text = text.lower() #lowercases word
-    text = re.sub(r'[^\w\s]', '', text) #removes punctuation
-    text = re.sub(r'[0–9]', '', text) #removes any numbers
-    text = re.sub('(<.*?>)', '', text) #removed html
-    #copied from https://swatimeena989.medium.com/beginners-guide-for-preprocessing-text-data-f3156bec85ca
-
-    lemmatizer = WordNetLemmatizer()
-    text = lemmatizer.lemmatize(text)
-
-    #p_stemmer = PorterStemmer()
-    #text = p_stemmer.stem(text)
-
-    return text
-    #copied from https://www.studytonight.com/post/scikitlearn-countvectorizer-in-nlp

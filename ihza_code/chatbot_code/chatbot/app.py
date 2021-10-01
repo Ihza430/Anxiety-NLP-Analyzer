@@ -8,6 +8,22 @@ import regex as re
 
 app = Flask(__name__)
 
+def custom_preprocessor (text):
+    text = text.lower() #lowercases word
+    text = re.sub(r'[^\w\s]', '', text) #removes punctuation
+    text = re.sub(r'[0–9]', '', text) #removes any numbers
+    text = re.sub('(<.*?>)', '', text) #removed html
+    #copied from https://swatimeena989.medium.com/beginners-guide-for-preprocessing-text-data-f3156bec85ca
+
+    lemmatizer = WordNetLemmatizer()
+    text = lemmatizer.lemmatize(text)
+
+    #p_stemmer = PorterStemmer()
+    #text = p_stemmer.stem(text)
+
+    return text
+    #copied from https://www.studytonight.com/post/scikitlearn-countvectorizer-in-nlp
+
 @app.route('/', methods=["GET", "POST"])
 def index():
     return render_template('index.html')
@@ -19,14 +35,23 @@ def anxiety_analyzer():
     
     X_test = str(user_input['text'])
     
-    if user_input
-    log_model = pickle.load(open('models/anxiety_log.pkl', 'rb'))
-    anxiety = log_model.predict([X_test])[0]
+    if user_input['fav_language'] == 'Logistic Regression':
+        log_model = pickle.load(open('models/anxiety_log.pkl', 'rb'))
+        anxiety = log_model.predict([X_test])[0]
+        return render_template('result.html', prediction = anxiety, model = 'Logistic Regression')
     
-    score = sentiment.score(X_test)
+    elif user_input['fav_language'] == 'Multinomial Naive Bayes':
+        mnb_model = pickle.load(open('models/grid_CountVectorizer_MultinomialNB.pkl', 'rb'))
+        anxiety = mnb_model.predict([X_test])[0]
+        
+        if anxiety == 0:
+            anxiety = 'Anxiety'
+        elif anxiety == 1:
+            anxiety = 'No Anxiety'
+            
+        return render_template('result.html', prediction = anxiety, model = 'Multinomial Naive Bayes')
     
-    return render_template('result.html', prediction = score)
-   
+    #score = sentiment.score(X_test)
         
     
 @app.route('/messenger', methods=["GET", "POST"])

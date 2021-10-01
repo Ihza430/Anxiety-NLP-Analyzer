@@ -4,11 +4,10 @@
 	<title>Text App</title>
     <link rel="stylesheet" type="text/css" href="../static/style.css">
 </head>
-<body>
+<body style = "background-image: url('../static/img/background.jpeg')">
     <div class="row">
-		<ul class="topnav">
-			<li class="active"><a href="/index">HOME</a></li>
-            <li><a href="/text_analyzer">TEXT ANALYSIS</a></li>
+		<ul class="topnav" style = "text-align: center">
+			<li class="active"><a href="/">HOME</a></li>
 			<li><a href="/messenger">CHATBOT</a></li>
 		</ul>
 	</div>	
@@ -16,10 +15,11 @@
 	<section class="heading">
 		<p>Welcome to our Text App</p>
 	</section>
+    <div class="inputs">
     <form action="/result" id="usrform">
 		<p>
             <label for="text">Please Enter Your Text...</label><br>
-            <textarea name="text" form="usrform"></textarea>
+            <textarea name="text" form="usrform" rows="6" cols="50"></textarea>
 		</p>
         <p>
         <input type="radio" id="log" name="fav_language" value="Logistic Regression">
@@ -30,6 +30,7 @@
         </p>
 		<p><button type="submit">Submit</button></p>
 	</form>
+    </div>
     
 </body>
 </html>
