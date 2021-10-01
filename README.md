@@ -7,20 +7,22 @@
 1. README.md
 2. Executive Summary
 3. Jupyter Notebooks
-   <details><summary>1. Azin Faghihi</summary>
-    - Azin_01_combine_data.ipynb
-    - Azin_02_process_model_data_EDA.ipynb
-    - Azin_03_study_models_vizualization.ipynb
-    - Azin_04_study_data_extra_EDA.ipynb
+   <details><summary>1. Azin Faghihi (4)</summary>
+    - Azin_01_combine_data.ipynb <br>
+    - Azin_02_process_model_data_EDA.ipynb <br>
+    - Azin_03_study_models_vizualization.ipynb <br>
+    - Azin_04_study_data_extra_EDA.ipynb <br>
    </details>
-   <details><summary>2. Ihza Gonzales</summary>
-    - 1_data_cleaning.ipynb<br> 
-    - 2_logistic_regression.ipynb<br>  
-    - 3_sentiment_analysis.ipynb
+   <details><summary>2. Ihza Gonzales (3)</summary>
+    - Ihza_1_data_cleaning.ipynb<br> 
+    - Ihza_2_logistic_regression.ipynb<br>  
+    - Ihza_3_sentiment_analysis.ipynb
    </details>
    <details><summary>3. Suelem Lee</summary>
    </details>
-4. Python Files
+4. <details><summary>Python File (1)</summary>
+    - emoji_sentiment_tools_simple.py -> Azin
+   </details>
 5. <details><summary>Chatbot Code</summary>
         <details><summary>1. Python Files</summary>
          - sentiment.py<br>
@@ -35,7 +37,12 @@
         </details>
    </details>
 6. PDF File
-7. Datasets
+7. <details><summary>Datasets(3)</summary>
+    - anxiety_submissions.csv <br>
+    - anxiety_writing.csv <br>
+    - writing_submissions.csv <br>
+   </details>
+
 
 ## Identified Need
 About 19% of adults have an anxiety disorder (Anxiety disorders, 2017). To put this in perspective that is over 40 million people in the US with anxiety. Now one’s choice of words even punctuation can hint at the mental or emotional status of a person (Havigerová et al., 2019). There are systems already created for the purpose of analyzing text to provide feedback about a person like the system, TensiStrength (Thelwall, 2016).
@@ -66,17 +73,16 @@ Decision making were based on a easy to perform initial screening tool for gener
 
 1. EDA
 2. Modeling for anxiety Classification
-3. Sentiment analysis validating Classification
+3. Sentiment analysis to further classify severity of anxiety
 4. Chatbot for immediate response
-5. Sentiment analysis to further classify severity of anxiety
 
 **The analysis of scrapped texts will be used in hopes of classifying users messaging anxiety levels as Binary Classification:**<br>
 >Not Anxious<br>
 >Anxious<br>
 
 Writing subreddit helps Classification for it's predominant positive neutral language.
-![writing subreddit vs anxiety subreddit Sentiment](./imgs/sentiment_small.png)
 
+<img src="./imgs/sentiment_small.png" alt="Drawing" style="width: 500px;"/>
 <img src="./imgs/sentiment_dist_(1).png" alt="Drawing" style="width: 400px;"/>
 
 ## Best parameters
@@ -137,7 +143,7 @@ Relaxation is an important aspect of our lives and becoming even more relevant t
 
 ## Research Sources
 
-Sources: Thelwall, M. (2016, July 12). TensiStrength: Stress and relaxation magnitude detection for social media texts. Science Direct. Retrieved September 16, 2021, from https://www.sciencedirect.com/science/article/abs/pii/S0306457316302321. 
+Thelwall, M. (2016, July 12). TensiStrength: Stress and relaxation magnitude detection for social media texts. Science Direct. Retrieved September 16, 2021, from https://www.sciencedirect.com/science/article/abs/pii/S0306457316302321. 
 Havigerová, J. M., Haviger, J., Kučera, D., & Hoffmannová, P. (2019, March 18).<br>
 
 Text-based detection of the risk of depression. Frontiers. Retrieved September 16, 2021, from https://www.frontiersin.org/articles/10.3389/fpsyg.2019.00513/full. <br>
