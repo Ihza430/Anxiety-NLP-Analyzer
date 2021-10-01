@@ -5,7 +5,7 @@
 ## Project Structure
 
 1. README.md
-2. Executive Summary
+2. [Executive Summary](https://github.com/Ihza430/GA_Project_5/blob/main/Executive_summary.pdf)
 3. Code
     <details><summary>1. Azin Faghihi</summary>
     <details><summary>1. Jupyter Notebooks (4)</summary>
