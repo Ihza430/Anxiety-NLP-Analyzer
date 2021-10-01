@@ -63,7 +63,7 @@ In the United States, the most common type of mental disorders is different kind
 4. Insomnia can lead to Weakened immune system, Unwanted weight gain...<br>
 
 While medications can treat many of these problems, we see the importance of preventive medicine in which needs to be addressed.<br>
-<img src="./imgs/depression_instagram.png" alt="Drawing" style="width: 400px;"/>
+<img src="./presentation/images/depression_instagram.png" alt="Drawing" style="width: 400px;"/>
 
 
 ## Problem Statement
@@ -90,9 +90,9 @@ Decision making were based on a easy to perform initial screening tool for gener
 >Anxious<br>
 
 Writing subreddit helps Classification for it's predominant positive neutral language.
-![writing subreddit vs anxiety subreddit Sentiment](./imgs/sentiment_small.png)
+![writing subreddit vs anxiety subreddit Sentiment](./presentation/images/sentiment_small.png)
 
-<img src="./imgs/sentiment_dist_(1).png" alt="Drawing" style="width: 400px;"/>
+<img src="./presentation/images/sentiment_dist_(1).png" alt="Drawing" style="width: 400px;"/>
 
 ## Best parameters
 
@@ -101,12 +101,12 @@ Writing subreddit helps Classification for it's predominant positive neutral lan
 >1. Repeated consecutive letters<br>
 >2. Frequency of Punctuation use<br>
 >3. Various different use of Emoticons<br>
-<img src="./imgs/worried.png" alt="Drawing" style="width: 300px;"/>
+<img src="./presentation/images/worried.png" alt="Drawing" style="width: 300px;"/>
 
 **Evidence of improvement:** The improvements suggest that additional fine tuning of the term strengths is necessary. The supervised version of our 3 models are preferable to the unsupervised variant, using Tfdif Vectorizer and Count Vectorizer only. Using bigrams hyperparameters for combined additional linguistic negation. After Classifying existance of anxiety on each post, we used a SentimentIntensityAnalyser to classify the intensity of the anxiety of that particular post.
 
 ## Threshold denomination
-<img src="./imgs/sentiment_threshold.png" alt="Drawing" style="width: 400px;"/>
+<img src="./presentation/images/sentiment_threshold.png" alt="Drawing" style="width: 400px;"/>
 
 ## Best Prediction Results
 
