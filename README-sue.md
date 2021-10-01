@@ -1,4 +1,4 @@
-# "Are you feeling anxious right now? Take this moment to a breath."
+# "Are you feeling anxious right now? Take this moment to take a breath."
 
 *By Azin Faghihi, Ihza Gonzales and Suelem Lee
 
@@ -15,44 +15,46 @@
 About 19% of adults have an anxiety disorder (Anxiety disorders, 2017). To put this in perspective that is over 40 million people in the US with anxiety. Now one’s choice of words even punctuation can hint at the mental or emotional status of a person (Havigerová et al., 2019). There are systems already created for the purpose of analyzing text to provide feedback about a person like the system, TensiStrength (Thelwall, 2016).
 
 ## Problem Statement
-The goal is to create a similar system with posts from the anxiety subreddit and classify them into varying degrees of anxiety and provide tailored messages to address anxiety levels with a Chatbot response system, based on their anxiety level.
+From anxiety subreddit can we classify them into varying degrees of anxiety and provide tailored messages to address anxiety levels with a Chatbot response system?
 
 ## Data Description
 
-Posts evaluated from anxiety and writing (neutral sentiment) subreddit: Web Scraping of following websites:
+Posts evaluated from anxiety and writing (neutral sentiment) subreddit: Web Scraping of following websites:<br>
+https://www.reddit.com/search/?q=anxiety<br>
+https://www.reddit.com/r/writing/<br>
 
-https://www.reddit.com/search/?q=anxiety
-https://www.reddit.com/r/writing/
-Decision making were based on a easy to perform initial screening tool for generalized anxiety disorder provided by the National HIV Curriculum: https://www.hiv.uw.edu/page/mental-health-screening/gad-7 https://www.hiv.uw.edu/page/mental-health-screening/gad-2
-
-
-### Data Dictionary
+Decision making were based on a easy to perform initial screening tool for generalized anxiety disorder provided by the National HIV Curriculum: <br>https://www.hiv.uw.edu/page/mental-health-screening/gad-7 https://www.hiv.uw.edu/page/mental-health-screening/gad-2
 
 
 ## Methodology
 
 **The analysis of scrapped texts will be used in hopes of classifying users messaging anxiety levels:**
 
-Not Anxious
-Anxious
-Severe Anxiety
+**Binary Classification:**<br>
+Not Anxious<br>
+Anxious<br>
 
 Writing subreddit helps Classification for it's predominant positive neutral language.
 ![writing subreddit vs anxiety subreddit Sentiment](./imgs/sentiment_small.png)
 
-**Models used to Classify anxiety levels are:**
+**Sentiment Analysis** on how 
 
-Multinomial Naive Bayes
-Random Forest
-Logistic Regression
-Best params:
+So 
+Severe Anxiety<br>
+Threshold denomination
+
+
+distribution 
+
+
 
 ## Best parameters
-Adjusted term weights: Methods to detect expressions of stress within short informal messages were SentimentIntensityAnalyser extended from Classifying models, where the ajdusted term weights were evaluated to improve performance of Classification.
 
-1. Repeated consecutive letters
-2. Frequency of Punctuation use
-3. Various different use of Emoticons
+**Adjusted term weights:** <br> Methods to detect expressions of stress within short informal messages were SentimentIntensityAnalyser extended from Classifying models, where the ajdusted term weights were evaluated to improve performance of Classification.
+
+1. Repeated consecutive letters<br>
+2. Frequency of Punctuation use<br>
+3. Various different use of Emoticons<br>
 
 ![Distribution of Sentiment scores EMOTICONS](./imgs/sentiment_dist_emoji.png)
 
@@ -63,29 +65,35 @@ Repeated Puntuations over 3 repetitions - Repeated exclamation and interrogation
 Emoticons used - corresponding to their sentiment different weights were assigned as anxiety indicators, such as ......
 EDA Bigrams analysis Emoticon analysis Common short words
 
-## Prediction Results
-MultinomialNB 
+## Best Prediction Results
 
 **Logistic Regression:**<br>
-Best Score: 0.9511904761904761<br>
-Best Parameters: <br>{'logr__C': 3,<br> 'logr__max_iter': 2000,<br> 'logr__penalty': 'l2',<br> 'logr__solver': 'saga'}<br>
-Train Score: 0.9921428571428571<br>
-Test Score: 0.9483333333333334<br>
+Best Score: 0.951<br>
+> Best Parameters: <br>{'logr__C': 3,<br> 
+>'logr__max_iter': 2000,<br> 
+>'logr__penalty': 'l2',<br> 
+>'logr__solver': 'saga'}<br>
+
+Train Score: 0.992<br>
+Test Score: 0.948<br>
 
 **Random Forest:**
-Best Score: 0.9531035939090995<br>
-Best Parameters: {'rf__max_depth': None,<br> 'rf__max_features': 'sqrt',<br> 'rf__n_estimators': 80,<br> 'tvec__max_features': 2000,<br> 'tvec__ngram_range': (1, 2),<br> 'tvec__stop_words': None}<br>
-Train Score: 0.9985569985569985<br>
-Test Score: 0.9556926528323051<br>
+Best Score: 0.953<br>
+>Best Parameters: {'rf__max_depth': None,<br> 
+>'rf__max_features': 'sqrt',<br> 
+>'rf__n_estimators': 80,<br> 
+>'tvec__max_features': 2000,<br> 
+>'tvec__ngram_range': (1, 2),<br> 
+>'tvec__stop_words': None}<br>
 
-Clustering
-
-
-## Software Requirements
+Train Score: 0.998<br>
+Test Score: 0.955<br>
 
 ## Conclusion
 
 Overall performance of models and sentiment analysis confirms how well we can accurately classify 3 levels of anxiety. It needs to be extended and tested in different contexts and tailored with specific types of anxiety linguistics.
+
+At this stage, the effectiveness of this Classifier depends on the nature of of the posts classified, rich in words and expressions of anxiety terms being more problematic in an analysable context.
 
 Relaxation is an important aspect of our lives and becoming even more relevant to our virtually connected lives. This anxiety detection app can help to enable smarter applications as well as extending our understanding of our conditions, helping to monitor our overall mental health and ultimately resulting in a punctual accessible more intimate solution for this great demand.
 
@@ -101,4 +109,11 @@ Relaxation is an important aspect of our lives and becoming even more relevant t
 
 ## Research Sources
 
-Sources: Thelwall, M. (2016, July 12). TensiStrength: Stress and relaxation magnitude detection for social media texts. Science Direct. Retrieved September 16, 2021, from https://www.sciencedirect.com/science/article/abs/pii/S0306457316302321. Havigerová, J. M., Haviger, J., Kučera, D., & Hoffmannová, P. (2019, March 18). Text-based detection of the risk of depression. Frontiers. Retrieved September 16, 2021, from https://www.frontiersin.org/articles/10.3389/fpsyg.2019.00513/full. National Alliance of Mental Illness. (2017, December). Anxiety disorders. NAMI. Retrieved September 16, 2021, from https://www.nami.org/About-Mental-Illness/Mental-Health-Conditions/Anxiety-Disorders. Python | Sentiment Analysis using VADER https://www.geeksforgeeks.org/python-sentiment-analysis-using-vader/
+Sources: Thelwall, M. (2016, July 12). TensiStrength: Stress and relaxation magnitude detection for social media texts. Science Direct. Retrieved September 16, 2021, from https://www.sciencedirect.com/science/article/abs/pii/S0306457316302321. 
+Havigerová, J. M., Haviger, J., Kučera, D., & Hoffmannová, P. (2019, March 18).<br>
+
+Text-based detection of the risk of depression. Frontiers. Retrieved September 16, 2021, from https://www.frontiersin.org/articles/10.3389/fpsyg.2019.00513/full. <br>
+
+National Alliance of Mental Illness. (2017, December). Anxiety disorders. NAMI. Retrieved September 16, 2021, from https://www.nami.org/About-Mental-Illness/Mental-Health-Conditions/Anxiety-Disorders. <br>
+
+Python | Sentiment Analysis using VADER https://www.geeksforgeeks.org/python-sentiment-analysis-using-vader/<br>
