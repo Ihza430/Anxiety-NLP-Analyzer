@@ -41,6 +41,11 @@
    <br>
    </details>
    <details><summary>3. Suelem Lee</summary>
+    <details><summary>1. Jupyter Notebooks (3)</summary>
+    - Suelem_1_scrapping.ipynb <br>
+    - Suelem_2_punct_eda.ipynb <br>
+    - Suelem_3_punct_prediction.ipynb
+    </details>
    </details>
 4. <details><summary>Presentation</summary>
     - Project-5-Presentation.pdf <br>
