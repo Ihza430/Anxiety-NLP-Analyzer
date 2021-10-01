@@ -5,6 +5,7 @@
 ## Project Structure
 
 1. README.md
+<<<<<<< HEAD
 2. Executive Summary
 <<<<<<< HEAD
 3. Jupyter Notebooks
@@ -15,6 +16,9 @@
 =======
    <details><summary>1. Azin Faghihi (4)</summary>
 =======
+=======
+2. [Executive Summary](https://github.com/Ihza430/GA_Project_5/blob/main/Executive_summary.pdf)
+>>>>>>> fd8c43962a1b4c53a2baa82bdc48a9504e7bb9e0
 3. Code
     <details><summary>1. Azin Faghihi</summary>
     <details><summary>1. Jupyter Notebooks (4)</summary>
