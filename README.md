@@ -81,8 +81,8 @@ Decision making were based on a easy to perform initial screening tool for gener
 >Anxious<br>
 
 Writing subreddit helps Classification for it's predominant positive neutral language.
-![writing subreddit vs anxiety subreddit Sentiment](./imgs/sentiment_small.png)
 
+<img src="./imgs/sentiment_small.png" alt="Drawing" style="width: 500px;"/>
 <img src="./imgs/sentiment_dist_(1).png" alt="Drawing" style="width: 400px;"/>
 
 ## Best parameters
@@ -143,7 +143,7 @@ Relaxation is an important aspect of our lives and becoming even more relevant t
 
 ## Research Sources
 
-Sources: Thelwall, M. (2016, July 12). TensiStrength: Stress and relaxation magnitude detection for social media texts. Science Direct. Retrieved September 16, 2021, from https://www.sciencedirect.com/science/article/abs/pii/S0306457316302321. 
+Thelwall, M. (2016, July 12). TensiStrength: Stress and relaxation magnitude detection for social media texts. Science Direct. Retrieved September 16, 2021, from https://www.sciencedirect.com/science/article/abs/pii/S0306457316302321. 
 Havigerová, J. M., Haviger, J., Kučera, D., & Hoffmannová, P. (2019, March 18).<br>
 
 Text-based detection of the risk of depression. Frontiers. Retrieved September 16, 2021, from https://www.frontiersin.org/articles/10.3389/fpsyg.2019.00513/full. <br>
