@@ -31,12 +31,12 @@
         },
         {"tag": "panic",
          "patterns": ["I am having trouble breathing", "I have anxiety"],
-         "responses": ["Take deep breaths.", "Close your eyes"],
+         "responses": ["Take deep breaths.", "Close your eyes", "Meditate", "Talk to close ones"],
          "context": [""]
         },
         {"tag": "help",
          "patterns": ["I need help", "What are my options?"],
-         "responses": ["What can I help you with?"],
+         "responses": ["What can I help you with?", "What do you need?", "Do you need someone to talk to, try Chatbot."],
          "context": [""]
         },
         {"tag": "death",
@@ -45,8 +45,16 @@
          "context": [""]
         },
         {"tag": "name",
-        "patterns": ["What is your name", "Whats your name", "Tell me your name", "Who are you", "Ungubani", "Tell me about yourself", "You are"],
+        "patterns": ["What is your name", "Whats your name", "Tell me your name", "Who are you", "Tell me about yourself", "You are"],
         "responses": ["I am Chatbot", "My name is Chatbot", "You can call me CB for short", "I am Chatbot, my friends call me CB", "Chatbot is my name"]
-      }
+        },
+        {"tag": "funny",
+        "patterns": ["Tell me a joke", "Make me laugh", "Distract me"],
+        "responses": ["There was a wild bamboo party at the zoo. It was utter panda-monium.", "The baker smiled and said, I don’t knead money, I’ve got plenty of dough.", "Skeleton puns are close to the bone.", "Haunted French pancakes will give you the crepes."]
+        },
+        {"tag": "encouragement",
+        "patterns": ["I need a pick me up", "Do you have advice?", "Words of encouragement"],
+        "responses": ["This is tough, but you’re tougher.", "I’m so sorry you’re going through this, but this too shall pass.", " I believe in you! And unicorns. But mostly you.", "Be kind to yourself."]
+        },
    ]
 }
