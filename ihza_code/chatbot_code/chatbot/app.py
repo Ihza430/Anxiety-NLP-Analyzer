@@ -1,3 +1,9 @@
+"""
+Modified from https://github.com/tatiblockchain/python-deep-learning-chatbot
+Modified from Lesson 5.4
+"""
+
+# Libraries Used
 from flask import Flask, render_template, jsonify, request, Response
 import processor
 import sentiment
@@ -8,6 +14,7 @@ import regex as re
 
 app = Flask(__name__)
 
+# Needed to run Logistic model
 def custom_preprocessor (text):
     text = text.lower() #lowercases word
     text = re.sub(r'[^\w\s]', '', text) #removes punctuation
@@ -46,8 +53,10 @@ def anxiety_analyzer():
                 pred = "Severe Anxiety"
             elif -0.85 < score < -0.25:
                 pred = "Moderate Anxiety"
-            elif -0.25 < score < 0:
+            elif -0.25 < score < 0.05:
                 pred = "Mild Anxiety"
+            else:
+                pred = "No Anxiety"
             
         return render_template('result.html', prediction = pred, model = 'Logistic Regression')
     

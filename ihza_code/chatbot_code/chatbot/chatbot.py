@@ -1,3 +1,9 @@
+"""
+Modified from https://github.com/tatiblockchain/python-deep-learning-chatbot
+
+"""
+
+# Libraries Used
 import nltk
 from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
@@ -8,6 +14,7 @@ import numpy as np
 from keras.models import Sequential
 from keras.layers import Dense, Activation, Dropout
 from tensorflow.keras.optimizers import SGD
+from tensorflow.keras.callbacks import EarlyStopping
 import random
 
 words=[]
@@ -85,8 +92,11 @@ model.add(Dense(len(train_y[0]), activation='softmax'))
 sgd = SGD(learning_rate=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
+#Use Earlystopping
+early_stop = EarlyStopping(monitor='accuracy', patience=10, verbose=1)
+
 #fitting and saving the model
-hist = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1)
+hist = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, callbacks=[early_stop], verbose=1)
 model.save('./models/chatbot_model.h5', hist)
 
 print("model created")

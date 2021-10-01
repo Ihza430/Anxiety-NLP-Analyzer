@@ -1,3 +1,9 @@
+"""
+Modified from https://github.com/tatiblockchain/python-deep-learning-chatbot
+
+"""
+
+# Libraries Used
 import nltk
 from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
