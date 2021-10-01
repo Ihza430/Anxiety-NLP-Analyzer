@@ -6,38 +6,47 @@
 
 1. README.md
 2. Executive Summary
-3. Jupyter Notebooks
-   <details><summary>1. Azin Faghihi (4)</summary>
+3. Code
+    <details><summary>1. Azin Faghihi</summary>
+    <details><summary>1. Jupyter Notebooks (4)</summary>
     - Azin_01_combine_data.ipynb <br>
     - Azin_02_process_model_data_EDA.ipynb <br>
     - Azin_03_study_models_vizualization.ipynb <br>
     - Azin_04_study_data_extra_EDA.ipynb <br>
-   </details>
-   <details><summary>2. Ihza Gonzales (3)</summary>
+    </details>
+    <details><summary>2. Python File (1)</summary>
+    - emoji_sentiment_tools_simple.py
+    </details>
+    <br>
+    </details>
+   <details><summary>2. Ihza Gonzales</summary>
+   <details><summary>1. Jupyter Notebooks (3)</summary>
     - Ihza_1_data_cleaning.ipynb<br> 
     - Ihza_2_logistic_regression.ipynb<br>  
     - Ihza_3_sentiment_analysis.ipynb
    </details>
+   <details><summary>2. Chatbot Code</summary>
+       <details><summary>1. Python Files</summary>
+        - sentiment.py<br>
+        - processor.py<br>
+        - chatbot.py<br>
+        - app.py   
+       </details>
+       <details><summary>2. Templates</summary>
+        - index.html<br>
+        - result.html<br>
+        - chatbot.html   
+       </details>
+   </details>
+   <br>
+   </details>
    <details><summary>3. Suelem Lee</summary>
    </details>
-4. <details><summary>Python File (1)</summary>
-    - emoji_sentiment_tools_simple.py -> Azin
+4. <details><summary>Presentation</summary>
+    - Project-5-Presentation.pdf <br>
+    - images
    </details>
-5. <details><summary>Chatbot Code</summary>
-        <details><summary>1. Python Files</summary>
-         - sentiment.py<br>
-         - processor.py<br>
-         - chatbot.py<br>
-         - app.py   
-        </details>
-        <details><summary>2. Templates</summary>
-         - index.html<br>
-         - result.html<br>
-         - chatbot.html   
-        </details>
-   </details>
-6. PDF File
-7. <details><summary>Datasets(3)</summary>
+5. <details><summary>Datasets(3)</summary>
     - anxiety_submissions.csv <br>
     - anxiety_writing.csv <br>
     - writing_submissions.csv <br>
@@ -81,8 +90,8 @@ Decision making were based on a easy to perform initial screening tool for gener
 >Anxious<br>
 
 Writing subreddit helps Classification for it's predominant positive neutral language.
+![writing subreddit vs anxiety subreddit Sentiment](./imgs/sentiment_small.png)
 
-<img src="./imgs/sentiment_small.png" alt="Drawing" style="width: 500px;"/>
 <img src="./imgs/sentiment_dist_(1).png" alt="Drawing" style="width: 400px;"/>
 
 ## Best parameters
@@ -143,7 +152,7 @@ Relaxation is an important aspect of our lives and becoming even more relevant t
 
 ## Research Sources
 
-Thelwall, M. (2016, July 12). TensiStrength: Stress and relaxation magnitude detection for social media texts. Science Direct. Retrieved September 16, 2021, from https://www.sciencedirect.com/science/article/abs/pii/S0306457316302321. 
+Sources: Thelwall, M. (2016, July 12). TensiStrength: Stress and relaxation magnitude detection for social media texts. Science Direct. Retrieved September 16, 2021, from https://www.sciencedirect.com/science/article/abs/pii/S0306457316302321. 
 Havigerová, J. M., Haviger, J., Kučera, D., & Hoffmannová, P. (2019, March 18).<br>
 
 Text-based detection of the risk of depression. Frontiers. Retrieved September 16, 2021, from https://www.frontiersin.org/articles/10.3389/fpsyg.2019.00513/full. <br>
