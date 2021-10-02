@@ -84,16 +84,17 @@ Decision making were based on a easy to perform initial screening tool for gener
 
 ## Software requirements
 
-**Used for EDA**<br>
-pandas,numpy, regex, sys, pprint, matplotlib.pyplot, seaborn<br>
+>**Used for EDA**<br>
+>pandas,numpy, regex, sys, pprint, matplotlib.pyplot, seaborn<br>
+><br>
+>**For NLP and sentiment analysis**<br>
+>sklearn.compose, nltk.sentiment.vader<br>
+><br>
+>**For modeling**<br>
+>emoji, pushshift api, tensorflow, scikit-learn<br>
 <br>
-**For NLP and sentiment analysis**<br>
-sklearn.compose, nltk.sentiment.vader<br>
-<br>
-**For modeling**<br>
-emoji, pushshift api, flask, tensorflow, scikit-learn<br>
-**Chatbot**<br>
-json, pickle<br>
+>**Chatbot**<br>
+>json, pickle, flask<br>
 
 ## Methodology
 
