@@ -92,7 +92,7 @@ Decision making were based on a easy to perform initial screening tool for gener
 ><br>
 >**For modeling**<br>
 >emoji, pushshift api, tensorflow, scikit-learn<br>
-<br>
+><br>
 >**Chatbot**<br>
 >json, pickle, flask<br>
 
