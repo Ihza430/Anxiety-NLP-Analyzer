@@ -82,6 +82,19 @@ https://www.reddit.com/r/writing/<br>
 
 Decision making were based on a easy to perform initial screening tool for generalized anxiety disorder provided by the National HIV Curriculum: <br>https://www.hiv.uw.edu/page/mental-health-screening/gad-7 https://www.hiv.uw.edu/page/mental-health-screening/gad-2
 
+## Software requirements
+
+>**Used for EDA**<br>
+>pandas,numpy, regex, sys, pprint, matplotlib.pyplot, seaborn<br>
+><br>
+>**For NLP and sentiment analysis**<br>
+>sklearn.compose, nltk.sentiment.vader<br>
+><br>
+>**For modeling**<br>
+>emoji, pushshift api, tensorflow, scikit-learn<br>
+><br>
+>**Chatbot**<br>
+>json, pickle, flask<br>
 
 ## Methodology
 
@@ -116,26 +129,7 @@ Writing subreddit helps Classification for it's predominant positive neutral lan
 ## Best Prediction Results
 
 **Logistic Regression:**<br>
-Best Score: 0.951<br>
-> Best Parameters: <br>{'logr__C': 3,<br> 
->'logr__max_iter': 2000,<br> 
->'logr__penalty': 'l2',<br> 
->'logr__solver': 'saga'}<br>
-
-Train Score: 0.992<br>
-Test Score: 0.948<br>
-
-**Random Forest:**
-Best Score: 0.953<br>
->Best Parameters: {'rf__max_depth': None,<br> 
->'rf__max_features': 'sqrt',<br> 
->'rf__n_estimators': 80,<br> 
->'tvec__max_features': 2000,<br> 
->'tvec__ngram_range': (1, 2),<br> 
->'tvec__stop_words': None}<br>
-
-Train Score: 0.998<br>
-Test Score: 0.955<br>
+<img src="./presentation/images/confusion_matrix_CountVectorizer_LogisticRegression.png" alt="Drawing" style="width: 400px;"/>
 
 ## Conclusion
 
